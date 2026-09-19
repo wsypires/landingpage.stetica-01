@@ -4,7 +4,7 @@
   :root {
     --font-cinzel: 'Cinzel', serif;
     --font-cormorant: 'Cormorant Garamond', serif;
-    --font-script: 'Great Vibes', cursive;
+    --font-script: 'Alex Brush', 'Great Vibes', cursive;
     --font-sans: 'Plus Jakarta Sans', sans-serif;
   }
 }
@@ -18,14 +18,14 @@
 }
 
 .font-script {
-  font-family: 'Great Vibes', 'Alex Brush', cursive;
+  font-family: 'Alex Brush', 'Great Vibes', cursive;
 }
 
 .font-body {
   font-family: 'Plus Jakarta Sans', sans-serif;
 }
 
-/* Organic shapes matching the Figma design */
+/* Organic shapes matching the brand reference */
 .organic-shape-1 {
   border-radius: 46% 54% 63% 37% / 40% 44% 56% 60%;
 }
@@ -38,16 +38,24 @@
   border-radius: 38% 62% 48% 52% / 51% 37% 63% 49%;
 }
 
-/* Glow effects */
+/* Glow effects matching warm olive & honey bronze */
 .glow-gold {
-  box-shadow: 0 0 40px -10px rgba(197, 168, 128, 0.25);
+  box-shadow: 0 0 35px -8px rgba(154, 114, 64, 0.22);
 }
 
-.glow-emerald {
-  box-shadow: 0 0 50px -12px rgba(20, 80, 65, 0.4);
+.glow-olive {
+  box-shadow: 0 0 45px -10px rgba(53, 65, 40, 0.25);
 }
 
-/* Smooth background gradients */
-.bg-radial-luxury {
-  background: radial-gradient(circle at 50% 20%, #172724 0%, #0d1716 45%, #070d0c 100%);
+/* Brand Button styling matching image exactly */
+.btn-reya-whatsapp {
+  background-color: #354128;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+.btn-reya-whatsapp:hover {
+  background-color: #27311D;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 25px -5px rgba(53, 65, 40, 0.35);
 }

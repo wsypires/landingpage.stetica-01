@@ -1,10 +1,13 @@
 import React, { useState } from 'react';
-import { MessageCircle, X, Sparkles, Send } from 'lucide-react';
+import { MessageCircle, X, Send } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/aestheticData';
+import { useTheme } from '../context/ThemeContext';
 
 export const FloatingWhatsApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [customText, setCustomText] = useState('');
+  const { theme } = useTheme();
+  const isDark = theme === 'dark';
 
   const defaultMsg = 'Olá! Vim pelo site da Reya Estética e gostaria de mais informações.';
 
@@ -21,24 +24,36 @@ export const FloatingWhatsApp: React.FC = () => {
       {isOpen && (
         <div
           id="whatsapp-quick-popup"
-          className="mb-3 w-80 sm:w-88 bg-[#0d1715] border border-[#c5a880]/40 rounded-2xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 text-white"
+          className={`mb-3 w-80 sm:w-88 border rounded-2xl shadow-2xl overflow-hidden animate-in fade-in slide-in-from-bottom-4 duration-300 transition-colors ${
+            isDark
+              ? 'bg-[#12201d] border-[#c5a880]/30 text-[#e0e7e5]'
+              : 'bg-white border-[#E8DFD4] text-[#28321D]'
+          }`}
         >
           {/* Header */}
-          <div className="bg-[#142320] p-4 border-b border-white/5 flex items-center justify-between">
+          <div
+            className={`p-4 flex items-center justify-between transition-colors ${
+              isDark ? 'bg-[#0a1412] text-white border-b border-[#1e3831]' : 'bg-[#354128] text-white'
+            }`}
+          >
             <div className="flex items-center gap-3">
-              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-[#c5a880]/50">
+              <div className="relative w-10 h-10 rounded-full overflow-hidden border border-white/30">
                 <img
                   src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?q=80&w=200&auto=format&fit=crop"
                   alt="Reya Atendimento"
                   className="w-full h-full object-cover"
                 />
-                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#25D366] ring-2 ring-[#0d1715]" />
+                <span className="absolute bottom-0 right-0 w-2.5 h-2.5 rounded-full bg-[#25D366] ring-2 ring-[#354128]" />
               </div>
               <div>
                 <h4 className="text-xs font-semibold text-white tracking-wide">
                   Reya Estética & Spa
                 </h4>
-                <div className="flex items-center gap-1.5 text-[10px] text-[#25D366]">
+                <div
+                  className={`flex items-center gap-1.5 text-[10px] ${
+                    isDark ? 'text-[#c5a880]' : 'text-[#D8BF9E]'
+                  }`}
+                >
                   <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
                   <span>Online agora • Atendimento exclusivo</span>
                 </div>
@@ -46,7 +61,7 @@ export const FloatingWhatsApp: React.FC = () => {
             </div>
             <button
               onClick={() => setIsOpen(false)}
-              className="text-zinc-400 hover:text-white p-1"
+              className="text-white/80 hover:text-white p-1 cursor-pointer"
               aria-label="Fechar popup WhatsApp"
             >
               <X className="w-4 h-4" />
@@ -54,13 +69,27 @@ export const FloatingWhatsApp: React.FC = () => {
           </div>
 
           {/* Body message preview */}
-          <div className="p-4 space-y-3 bg-[#0a1210]/60">
-            <div className="bg-[#142320] border border-white/5 rounded-xl rounded-tl-none p-3 text-xs text-zinc-200 shadow-sm">
+          <div
+            className={`p-4 space-y-3 transition-colors ${
+              isDark ? 'bg-[#0e1917]' : 'bg-[#FAF7F2]'
+            }`}
+          >
+            <div
+              className={`border rounded-xl rounded-tl-none p-3 text-xs shadow-xs transition-colors ${
+                isDark
+                  ? 'bg-[#152723] border-[#1e3831] text-[#d6e2df]'
+                  : 'bg-white border-[#E8DFD4] text-[#554F44]'
+              }`}
+            >
               <p>
                 ✨ Olá! Seja muito bem-vinda(o) à <strong>Reya Estética & Spa</strong>.
               </p>
-              <p className="mt-1.5 text-[11px] text-zinc-400">
-                Deseja agendar uma sessão de massagem, drenagem, facial ou conhecer nossos pacotes? Como podemos te ajudar hoje?
+              <p
+                className={`mt-1.5 text-[11px] ${
+                  isDark ? 'text-[#9cb2ac]' : 'text-[#7A7264]'
+                }`}
+              >
+                Deseja agendar uma sessão de massagem, tratamento facial, corporal ou conhecer nossos pacotes? Como podemos te ajudar hoje?
               </p>
             </div>
 
@@ -77,7 +106,11 @@ export const FloatingWhatsApp: React.FC = () => {
                     window.open(getWhatsAppUrl(`Olá! Gostaria de ${prompt}.`), '_blank');
                     setIsOpen(false);
                   }}
-                  className="w-full text-left px-3 py-1.5 rounded-lg bg-black/40 hover:bg-[#c5a880]/20 border border-white/5 hover:border-[#c5a880]/30 text-[11px] text-zinc-300 hover:text-white transition-all cursor-pointer"
+                  className={`w-full text-left px-3 py-1.5 rounded-lg border text-[11px] transition-all cursor-pointer ${
+                    isDark
+                      ? 'bg-[#13201d] hover:bg-[#1a2d28] border-[#1e3831] hover:border-[#c5a880]/40 text-[#c5a880]'
+                      : 'bg-white hover:bg-[#354128]/5 border-[#E8DFD4] hover:border-[#354128]/40 text-[#4E473B]'
+                  }`}
                 >
                   💬 {prompt}
                 </button>
@@ -86,21 +119,33 @@ export const FloatingWhatsApp: React.FC = () => {
           </div>
 
           {/* Quick Input & Send */}
-          <div className="p-3 bg-[#0d1715] border-t border-white/5 flex items-center gap-2">
+          <div
+            className={`p-3 border-t flex items-center gap-2 transition-colors ${
+              isDark ? 'bg-[#12201d] border-[#1e3831]' : 'bg-white border-[#E8DFD4]'
+            }`}
+          >
             <input
               type="text"
               placeholder="Digite sua mensagem..."
               value={customText}
               onChange={(e) => setCustomText(e.target.value)}
               onKeyDown={(e) => e.key === 'Enter' && handleSend()}
-              className="flex-1 bg-black/40 border border-white/10 rounded-xl px-3 py-2 text-xs text-white placeholder-zinc-500 focus:outline-none focus:border-[#c5a880]"
+              className={`flex-1 border rounded-xl px-3 py-2 text-xs focus:outline-none transition-colors ${
+                isDark
+                  ? 'bg-[#0c1413] border-[#1e3831] text-white placeholder-[#5e7771] focus:border-[#c5a880]'
+                  : 'bg-[#FAF7F2] border-[#E8DFD4] text-[#28321D] placeholder-[#9E9689] focus:border-[#9A7240]'
+              }`}
             />
             <button
               onClick={handleSend}
-              className="p-2.5 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-[#07130f] transition-colors cursor-pointer"
+              className={`p-2.5 rounded-xl transition-colors cursor-pointer ${
+                isDark
+                  ? 'bg-[#c5a880] hover:bg-[#d8bf9e] text-[#0c1413]'
+                  : 'bg-[#354128] hover:bg-[#27311D] text-white'
+              }`}
               aria-label="Enviar mensagem para WhatsApp"
             >
-              <Send className="w-3.5 h-3.5 fill-[#07130f]" />
+              <Send className="w-3.5 h-3.5 fill-current" />
             </button>
           </div>
         </div>
@@ -110,22 +155,37 @@ export const FloatingWhatsApp: React.FC = () => {
       <button
         id="floating-whatsapp-btn"
         onClick={() => setIsOpen(!isOpen)}
-        className="group relative flex items-center gap-3 py-3 px-4 sm:px-5 rounded-full bg-[#25D366] hover:bg-[#20ba5a] text-[#06120e] shadow-2xl shadow-emerald-950/80 transition-all duration-300 hover:scale-105 cursor-pointer focus:outline-none focus:ring-2 focus:ring-[#25D366]/50"
+        className={`group relative flex items-center gap-3 py-3 px-4 sm:px-5 rounded-full shadow-xl transition-all duration-300 hover:scale-105 cursor-pointer focus:outline-none ${
+          isDark
+            ? 'bg-[#c5a880] hover:bg-[#d8bf9e] text-[#0c1413]'
+            : 'bg-[#354128] hover:bg-[#27311D] text-white'
+        }`}
         aria-label="Abrir WhatsApp para agendamento"
       >
-        {/* Pulsing ring animation */}
-        <span className="absolute -inset-1 rounded-full bg-[#25D366]/30 animate-ping pointer-events-none" />
+        <span
+          className={`absolute -inset-1 rounded-full animate-ping pointer-events-none ${
+            isDark ? 'bg-[#c5a880]/20' : 'bg-[#354128]/20'
+          }`}
+        />
 
         <div className="relative">
-          <MessageCircle className="w-6 h-6 fill-[#06120e] text-[#06120e]" />
-          <span className="absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-white border-2 border-[#25D366]" />
+          <MessageCircle className="w-5 h-5 fill-current" />
+          <span
+            className={`absolute -top-1 -right-1 w-2.5 h-2.5 rounded-full bg-[#25D366] border-2 ${
+              isDark ? 'border-[#c5a880]' : 'border-[#354128]'
+            }`}
+          />
         </div>
 
         <div className="flex flex-col text-left leading-tight">
-          <span className="text-[10px] uppercase font-bold tracking-wider opacity-80">
-            Fale Conosco
+          <span
+            className={`text-[9px] uppercase font-medium tracking-wider ${
+              isDark ? 'text-[#0c1413]/70' : 'text-white/80'
+            }`}
+          >
+            AGENDAMENTO
           </span>
-          <span className="text-xs font-extrabold tracking-wide font-medium">
+          <span className="text-xs font-semibold tracking-wide">
             WhatsApp
           </span>
         </div>
