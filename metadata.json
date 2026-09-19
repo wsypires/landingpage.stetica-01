@@ -1,0 +1,6 @@
+{
+  "name": "Reya Estética & Spa",
+  "description": "Landing page de alta conversão para o nicho de estética, massagens e bem-estar com agendamento via WhatsApp.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
