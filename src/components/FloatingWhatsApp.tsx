@@ -1,6 +1,10 @@
 import React, { useState } from 'react';
 import { MessageCircle, X, Sparkles, Send } from 'lucide-react';
+<<<<<<< HEAD
 import { getWhatsAppUrl } from '../data/aestheticData';
+=======
+import { WHATSAPP_FORMATTED, getWhatsAppUrl } from '../data/aestheticData';
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 
 export const FloatingWhatsApp: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -40,7 +44,11 @@ export const FloatingWhatsApp: React.FC = () => {
                 </h4>
                 <div className="flex items-center gap-1.5 text-[10px] text-[#25D366]">
                   <span className="w-1.5 h-1.5 rounded-full bg-[#25D366] animate-pulse" />
+<<<<<<< HEAD
                   <span>Online agora • Atendimento exclusivo</span>
+=======
+                  <span>Online agora • {WHATSAPP_FORMATTED}</span>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
                 </div>
               </div>
             </div>
@@ -123,11 +131,19 @@ export const FloatingWhatsApp: React.FC = () => {
 
         <div className="flex flex-col text-left leading-tight">
           <span className="text-[10px] uppercase font-bold tracking-wider opacity-80">
+<<<<<<< HEAD
             Fale Conosco
           </span>
           <span className="text-xs font-extrabold tracking-wide font-medium">
             WhatsApp
           </span>
+=======
+            WhatsApp
+          </span>
+          <span className="text-xs font-extrabold tracking-wide font-mono">
+            {WHATSAPP_FORMATTED}
+          </span>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
         </div>
       </button>
     </div>

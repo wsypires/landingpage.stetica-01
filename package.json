@@ -27,6 +27,10 @@
     "@types/react": "^19.3.0",
     "@types/react-dom": "^19.3.0",
     "autoprefixer": "^10.4.21",
+<<<<<<< HEAD
+=======
+    "esbuild": "^0.25.0",
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
     "tailwindcss": "^4.3.3",
     "tsx": "^4.21.0",
     "typescript": "^7.0.2",

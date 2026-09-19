@@ -1,6 +1,10 @@
 import React from 'react';
 import { MessageCircle, Sparkles, ArrowRight } from 'lucide-react';
+<<<<<<< HEAD
 import { getWhatsAppUrl } from '../data/aestheticData';
+=======
+import { WHATSAPP_FORMATTED, getWhatsAppUrl } from '../data/aestheticData';
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 import { PalmLeafLeft } from './BotanicalAccents';
 
 interface HeroAboutProps {
@@ -83,7 +87,11 @@ export const HeroAbout: React.FC<HeroAboutProps> = ({ onOpenBooking, lang }) => 
                 <ArrowRight className="inline-block w-3.5 h-3.5 ml-2 transition-transform duration-300 group-hover:translate-x-1" />
               </button>
 
+<<<<<<< HEAD
               {/* Direct WhatsApp Action */}
+=======
+              {/* Direct WhatsApp Action with requested phone number */}
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               <a
                 id="hero-whatsapp-cta-btn"
                 href={whatsappUrl}
@@ -95,6 +103,22 @@ export const HeroAbout: React.FC<HeroAboutProps> = ({ onOpenBooking, lang }) => 
                 <span>Agendar no WhatsApp</span>
               </a>
             </div>
+<<<<<<< HEAD
+=======
+
+            {/* Phone badge */}
+            <div className="mt-4 flex items-center gap-2 text-[11px] text-zinc-400">
+              <span className="text-zinc-500">Contato direto:</span>
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-[#c5a880] hover:underline font-mono tracking-wider font-medium"
+              >
+                {WHATSAPP_FORMATTED}
+              </a>
+            </div>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
           </div>
 
           {/* Right Column: Organic Cutout Visual (Exact Figma Organic Shape with Woman at Spa) */}
@@ -122,6 +146,17 @@ export const HeroAbout: React.FC<HeroAboutProps> = ({ onOpenBooking, lang }) => 
 
                 {/* Subtle dark vignette overlay matching Figma */}
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0c1413]/50 via-transparent to-black/20 pointer-events-none" />
+<<<<<<< HEAD
+=======
+
+                {/* Floating Micro-Badge */}
+                <div className="absolute bottom-6 right-8 bg-[#0c1413]/85 backdrop-blur-md border border-[#c5a880]/40 rounded-full px-4 py-2 flex items-center gap-2.5 shadow-lg">
+                  <span className="w-2 h-2 rounded-full bg-[#25D366] animate-pulse" />
+                  <span className="text-[11px] tracking-widest uppercase font-medium text-white">
+                    Momentos de Puro Bem-Estar
+                  </span>
+                </div>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               </div>
             </div>
           </div>

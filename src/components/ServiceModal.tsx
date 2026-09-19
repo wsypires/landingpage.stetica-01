@@ -1,6 +1,10 @@
 import React from 'react';
 import { X, MessageCircle, Clock, CheckCircle2, Sparkles, ShieldCheck } from 'lucide-react';
+<<<<<<< HEAD
 import { ServiceItem, getWhatsAppUrl } from '../data/aestheticData';
+=======
+import { ServiceItem, getWhatsAppUrl, WHATSAPP_FORMATTED } from '../data/aestheticData';
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 
 interface ServiceModalProps {
   service: ServiceItem | null;
@@ -101,7 +105,11 @@ export const ServiceModal: React.FC<ServiceModalProps> = ({ service, onClose }) 
               className="w-full flex items-center justify-center gap-3 py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-[#0c1413] font-bold text-xs sm:text-sm uppercase tracking-wider transition-all duration-300 shadow-xl shadow-[#25D366]/20"
             >
               <MessageCircle className="w-4 h-4 fill-[#0c1413]" />
+<<<<<<< HEAD
               <span>Agendar no WhatsApp</span>
+=======
+              <span>Agendar no WhatsApp ({WHATSAPP_FORMATTED})</span>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
             </a>
             <p className="text-center text-[10px] text-zinc-400 mt-2 font-light">
               Resposta rápida por nossas fisioterapeutas e esteticistas.

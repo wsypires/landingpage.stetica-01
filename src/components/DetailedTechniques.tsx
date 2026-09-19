@@ -1,5 +1,9 @@
 import React from 'react';
+<<<<<<< HEAD
 import { TECHNIQUES, getWhatsAppUrl } from '../data/aestheticData';
+=======
+import { TECHNIQUES, getWhatsAppUrl, WHATSAPP_FORMATTED } from '../data/aestheticData';
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 import { MessageCircle, ArrowUpRight } from 'lucide-react';
 
 interface DetailedTechniquesProps {
@@ -156,7 +160,11 @@ export const DetailedTechniques: React.FC<DetailedTechniquesProps> = ({ lang }) 
                 className="w-full sm:w-auto flex items-center justify-center gap-3 px-8 py-4 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-[#07130f] font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-xl shadow-emerald-950/60"
               >
                 <MessageCircle className="w-5 h-5 fill-[#07130f]" />
+<<<<<<< HEAD
                 <span>Conversar no WhatsApp</span>
+=======
+                <span>Conversar no WhatsApp ({WHATSAPP_FORMATTED})</span>
+>>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               </a>
             </div>
           </div>
