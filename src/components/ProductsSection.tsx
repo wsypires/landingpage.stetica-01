@@ -1,10 +1,6 @@
 import React from 'react';
 import { MessageCircle, CheckCircle2, ArrowRight, Sparkles } from 'lucide-react';
-<<<<<<< HEAD
 import { getWhatsAppUrl } from '../data/aestheticData';
-=======
-import { WHATSAPP_FORMATTED, getWhatsAppUrl } from '../data/aestheticData';
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 import { PalmLeafLeft } from './BotanicalAccents';
 
 interface ProductsSectionProps {
@@ -154,22 +150,14 @@ export const ProductsSection: React.FC<ProductsSectionProps> = ({ onOpenBooking,
             </div>
 
             <p className="mt-4 text-[11px] text-zinc-400">
-<<<<<<< HEAD
               Dúvidas sobre o tratamento ideal?{' '}
-=======
-              Dúvidas sobre o tratamento ideal? Converse diretamente no{' '}
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               <a
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
                 className="text-[#c5a880] hover:underline font-semibold"
               >
-<<<<<<< HEAD
                 Converse diretamente com nossas especialistas
-=======
-                {WHATSAPP_FORMATTED}
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               </a>
             </p>
           </div>

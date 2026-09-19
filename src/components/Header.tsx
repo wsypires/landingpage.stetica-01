@@ -1,10 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { MessageCircle, Menu, X, Phone } from 'lucide-react';
-<<<<<<< HEAD
 import { getWhatsAppUrl } from '../data/aestheticData';
-=======
-import { WHATSAPP_FORMATTED, getWhatsAppUrl } from '../data/aestheticData';
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 
 interface HeaderProps {
   onOpenBooking: () => void;
@@ -143,11 +139,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, lang, setLang }) 
             className="flex items-center gap-2 px-4 py-2 rounded border border-[#c5a880]/70 bg-[#c5a880]/10 hover:bg-[#c5a880]/20 text-[#e4d1b8] hover:text-white transition-all duration-300 text-[11px] tracking-widest font-medium"
           >
             <MessageCircle className="w-3.5 h-3.5 text-[#25D366]" />
-<<<<<<< HEAD
             <span>WhatsApp</span>
-=======
-            <span>{WHATSAPP_FORMATTED}</span>
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
           </a>
         </div>
 
@@ -211,11 +203,7 @@ export const Header: React.FC<HeaderProps> = ({ onOpenBooking, lang, setLang }) 
               className="w-full flex items-center justify-center gap-2 py-3 rounded border border-[#25D366]/50 bg-[#25D366]/10 text-white text-xs tracking-widest font-medium"
             >
               <MessageCircle className="w-4 h-4 text-[#25D366]" />
-<<<<<<< HEAD
               <span>Chamar no WhatsApp</span>
-=======
-              <span>Chamar no WhatsApp: {WHATSAPP_FORMATTED}</span>
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
             </a>
 
             <button

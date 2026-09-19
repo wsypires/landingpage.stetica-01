@@ -1,10 +1,6 @@
 import React, { useState } from 'react';
 import { X, MessageCircle, Sparkles, Calendar, Clock, User, Check } from 'lucide-react';
-<<<<<<< HEAD
 import { SERVICES, getWhatsAppUrl } from '../data/aestheticData';
-=======
-import { SERVICES, getWhatsAppUrl, WHATSAPP_FORMATTED } from '../data/aestheticData';
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 
 interface QuickBookingModalProps {
   isOpen: boolean;
@@ -159,11 +155,7 @@ export const QuickBookingModal: React.FC<QuickBookingModalProps> = ({ isOpen, on
               className="w-full py-3.5 px-6 rounded-xl bg-[#25D366] hover:bg-[#20ba5a] text-[#07130f] font-bold text-xs sm:text-sm uppercase tracking-wider flex items-center justify-center gap-2 transition-all duration-300 shadow-xl shadow-[#25D366]/20 cursor-pointer"
             >
               <MessageCircle className="w-4 h-4 fill-[#07130f]" />
-<<<<<<< HEAD
               <span>Confirmar pelo WhatsApp</span>
-=======
-              <span>Enviar pelo WhatsApp ({WHATSAPP_FORMATTED})</span>
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
             </button>
             <p className="text-center text-[10px] text-zinc-400 mt-2 font-light">
               Você será direcionado diretamente ao WhatsApp para confirmação do horário.

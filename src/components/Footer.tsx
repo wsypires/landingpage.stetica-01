@@ -1,11 +1,6 @@
 import React from 'react';
-<<<<<<< HEAD
 import { MessageCircle, MapPin, Clock, Instagram, Heart } from 'lucide-react';
 import { getWhatsAppUrl } from '../data/aestheticData';
-=======
-import { MessageCircle, Phone, MapPin, Clock, Instagram, Heart } from 'lucide-react';
-import { WHATSAPP_FORMATTED, getWhatsAppUrl } from '../data/aestheticData';
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
 
 interface FooterProps {
   onOpenBooking: () => void;
@@ -59,11 +54,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, lang }) => {
                 className="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-[#25D366]/10 hover:bg-[#25D366]/20 border border-[#25D366]/30 text-white text-xs font-medium transition-colors"
               >
                 <MessageCircle className="w-4 h-4 text-[#25D366]" />
-<<<<<<< HEAD
                 <span>Conversar no WhatsApp</span>
-=======
-                <span>WhatsApp: {WHATSAPP_FORMATTED}</span>
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
               </a>
             </div>
           </div>
@@ -119,25 +110,9 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, lang }) => {
                     href={whatsappUrl}
                     target="_blank"
                     rel="noopener noreferrer"
-<<<<<<< HEAD
                     className="text-[#25D366] hover:underline font-medium tracking-wider"
                   >
                     Conversar no WhatsApp
-=======
-                    className="text-white hover:text-[#c5a880] font-mono font-medium tracking-wider"
-                  >
-                    {WHATSAPP_FORMATTED}
-                  </a>
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <Phone className="w-4 h-4 text-[#c5a880] shrink-0 mt-0.5" />
-                <div>
-                  <span className="text-zinc-400 block">Telefone Comercial:</span>
-                  <a href={`tel:+5567992144061`} className="text-white hover:text-[#c5a880]">
-                    +55 {WHATSAPP_FORMATTED}
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
                   </a>
                 </div>
               </div>
@@ -167,12 +142,7 @@ export const Footer: React.FC<FooterProps> = ({ onOpenBooking, lang }) => {
             © {new Date().getFullYear()} REYA Estética & Spa. Todos os direitos reservados.
           </p>
           <div className="flex items-center gap-1.5 text-zinc-400">
-<<<<<<< HEAD
             <span>Atendimento exclusivo e personalizado via WhatsApp</span>
-=======
-            <span>Desenvolvido para alta conversão no WhatsApp</span>
-            <span className="text-[#25D366] font-mono font-bold">({WHATSAPP_FORMATTED})</span>
->>>>>>> 388faeab63f7a10fd6f023cf290be4b436a8350b
           </div>
         </div>
       </div>
